@@ -18,7 +18,6 @@
 <form method="post">
     @csrf
     <div class="row">
-        <h2>Adicionar Séries</h2>
         <div class="col col-8">
             <label for="nome" class="">Nome:</label>
             <input type="text" class="form-control" name="nome" id="nome">

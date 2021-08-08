@@ -17,8 +17,21 @@ Séries
 <ul class="list-group">
     @foreach($series as $serie)
     <li class="list-group-item d-flex justify-content-between align-items-center">
-        {{ $serie->nome  }} - {{ $serie->id }}
+        {{ $serie->nome  }}
+
+        <div class="input-group w-50" hidden id="input-nome-serie-{{ $serie->id }}">
+            <input type="text" class="form-control" value="{{ $serie->nome }}">
+            <div class="input-group-append">
+                <button class="btn btn-primary" onclick="editarSerie({{ $serie->id }})">
+                    <i class="fas fa-check"></i>
+                </button>
+                @csrf
+            </div>
+        </div>
         <span class="d-flex">
+            <button style="margin-right: 5px" class="btn btn-info btn-sm mr-1" onclick="toggleInput({{ $serie->id }})">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </button>
             <a href="/series/{{ $serie->id }}/temporadas" style="margin-right: 5px" class="btn btn-info btn-sm mr-2">
                 <i class="fa fa-external-link" aria-hidden="true"></i>
             </a>

@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Serie;
 
 class TemporadasController extends Controller
 {
     public function index(int $serieId)
     {
-        var_dump($serieId);
-        return false;
         $serie = Serie::find($serieId);
         $temporadas = $serie->temporadas;
 

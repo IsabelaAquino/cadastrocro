@@ -22,10 +22,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="jumbotron">
-            <h1>@yield('head')</h1>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">@yield('cabecalho')</h1>
         </div>
-
+    </div>
         @yield('conteudo')
     </div>
 </body>
