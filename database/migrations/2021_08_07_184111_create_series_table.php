@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIdTbSeries extends Migration
+class CreateSeriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddIdTbSeries extends Migration
      */
     public function up()
     {
-        Schema::table('tb_series', function (Blueprint $table) {
-            $table->bigInteger('id');
+        Schema::create('series', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nome');
+            $table->timestamps();
         });
     }
 
@@ -25,7 +27,6 @@ class AddIdTbSeries extends Migration
      */
     public function down()
     {
-        Schema::table('tb_series', function (Blueprint $table) {
-        });
+        Schema::dropIfExists('series');
     }
 }

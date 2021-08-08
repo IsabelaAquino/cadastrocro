@@ -1,25 +1,38 @@
 @extends('layout')
 
-@section('head')
-<h1>Adicionar Série</h1>
+@section('cabecalho')
+    Adicionar Série
 @endsection
 
 @section('conteudo')
-    @if($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach($errors->all() as $error)
-                    <li>{{$error}}</li>
-                @endforeach
-            </ul>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+<form method="post">
+    @csrf
+    <div class="row">
+        <h2>Adicionar Séries</h2>
+        <div class="col col-8">
+            <label for="nome" class="">Nome:</label>
+            <input type="text" class="form-control" name="nome" id="nome">
         </div>
-    @endif
-    <form action="" method="post">
-        @csrf
-        <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input class="form-control" type="text" name="nome" id="nome">
-            <button class="btn btn-success mt-2">Salvar</button>
+        <div class="col col-2">
+            <label for="qtd_temporada" class="">Nº de temporadas:</label>
+            <input type="number" class="form-control" name="qtd_temporadas" id="qtd_temporadas">
         </div>
-    </form>
+        <div class="col col-2">
+            <label for="ep_temporada" class="">Nº Ep. por temporadas:</label>
+            <input type="number" class="form-control" name="ep_temporadas" id="ep_temporadas">
+        </div>
+    </div>
+
+    <button class="btn btn-primary mt-2">Adicionar</button>
+</form>
 @endsection
