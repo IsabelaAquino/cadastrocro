@@ -30,3 +30,5 @@ Route::post('/temporadas/{temporada}/episodios/assistir', 'EpisodiosController@a
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/perfil/usuario', 'EnderecosController@create')->name('form_perfil_usuario')->middleware('auth');
+Route::post('/perfil/usuario', 'EnderecosController@update')->middleware('auth');

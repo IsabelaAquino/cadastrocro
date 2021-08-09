@@ -24,7 +24,15 @@
     <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-2 d-flex justify-content-between">
         <a style="font-weight: bold; text-decoration: none;"  class="navbar navbar-expand-lg p-4" href="{{ route('home') }}">Início</a>
-        <a style="font-weight: bold; text-decoration: none;" href="{{ route('logout') }}" class="text-danger p-4">Sair</a>
+        <a style="font-weight: bold; text-decoration: none;" class="text-danger p-4" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+            {{ __('Sair') }}
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+        <!-- <a  href="{{ route('logout') }}" class="text-danger p-4">Sair</a> -->
     </nav>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">

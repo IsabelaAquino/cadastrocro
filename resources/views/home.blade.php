@@ -15,7 +15,7 @@
                     @endif
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="">
+                        <a href="{{ route('form_perfil_usuario') }}">
                             Perfil de Usuário
                         </a>
                     </li>
