@@ -24,7 +24,9 @@ class SeriesFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome' => 'required|min:2'
+            'nome' => 'required|min:2',
+            'qtd_temporadas' => 'required',
+            'ep_temporadas' => 'required'
         ];
     }
 

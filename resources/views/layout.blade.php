@@ -22,6 +22,10 @@
 </head>
 <body>
     <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-2 d-flex justify-content-between">
+        <a class="navbar navbar-expand-lg" href="{{ route('home') }}">Home</a>
+        <a href="{{ route('logout') }}" class="text-danger">Sair</a>
+    </nav>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">@yield('cabecalho')</h1>
