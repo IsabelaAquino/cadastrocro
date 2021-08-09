@@ -12,7 +12,9 @@ Séries
 </div>
 @endif
 
-<a href="{{ route('form_criar_serie') }}" class="btn btn-dark mb-2">Adicionar</a>
+<a href="{{ route('form_criar_serie') }}" class="btn btn-dark mb-2">Nova Série
+<i class="fa fa-plus-circle" aria-hidden="true"></i>
+</a>
 
 <ul class="list-group">
     @foreach($series as $serie)

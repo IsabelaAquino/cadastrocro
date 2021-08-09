@@ -15,12 +15,12 @@
                     @endif
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="#">
+                        <a href="">
                             Perfil de Usuário
                         </a>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="#">
+                        <a href="/series">
                             Séries
                         </a>
                     </li>

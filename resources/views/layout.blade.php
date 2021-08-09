@@ -23,8 +23,8 @@
 <body>
     <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-2 d-flex justify-content-between">
-        <a class="navbar navbar-expand-lg" href="{{ route('home') }}">Home</a>
-        <a href="{{ route('logout') }}" class="text-danger">Sair</a>
+        <a style="font-weight: bold; text-decoration: none;"  class="navbar navbar-expand-lg p-4" href="{{ route('home') }}">Início</a>
+        <a style="font-weight: bold; text-decoration: none;" href="{{ route('logout') }}" class="text-danger p-4">Sair</a>
     </nav>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
